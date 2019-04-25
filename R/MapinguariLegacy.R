@@ -2,7 +2,7 @@
 #'
 #' Mapinguari provides solutions for incorporating biological processes in biogeographical analysis.
 #'
-#' @section Mapinguari functions:
+#' @section MapinguariLegacy functions:
 #'
 #'\itemize{
 #'   \item \code{\link{clean_points}}
@@ -18,5 +18,5 @@
 #'   }
 #'
 #' @docType package
-#' @name Mapinguari
+#' @name MapinguariLegacy
 NULL

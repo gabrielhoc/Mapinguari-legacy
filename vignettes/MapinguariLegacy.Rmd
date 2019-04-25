@@ -1,10 +1,10 @@
 ---
-title: "Mapinguari"
+title: "MapinguariLegacy"
 author: "Gabriel Caetano, Juan Santos, Barry Sinervo"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Mapinguari}
+  %\VignetteIndexEntry{MapinguariLegacy}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -25,9 +25,9 @@ The package is currently hosted on GitHub, this is how to install and load it:
 # You need package devtools to install packages from GitHub
 library(devtools)
 
-install_github("gabrielhoc/Mapinguari-legacy")
+install_github("gabrielhoc/MapinguariLegacy")
 
-library(Mapinguari-legacy)
+library(MapinguariLegacy)
 ```
 
 Next, we are going to give an example of how to use the package, using some simulated data:
