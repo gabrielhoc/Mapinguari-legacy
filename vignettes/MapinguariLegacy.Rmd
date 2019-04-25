@@ -129,7 +129,7 @@ plot(FulanusEcoRasters_present[[1]])
 
 However, in order for Mapinguari to recognize which variables correspond to each year or scenario, you have to name your folders and list elements following the convention *variable_year_scenario*. The default character for separating those terms is "_", but you can change that, as long as you do the corresponding change to the argument `separator` in the function. Some of your rasters will not be subject to scenarios, since they are measures of current climate, instead of projections. In that case you only have to name their folders *variable_year*, omitting the scenario term. The argument `baseline` identifies which years are not subject to scenarios. The default for this argument is `present`, but it can be changed at your convenience. Some other variables are constant accross the time considered, such as altitude. In that case you only have to write the name of the variable. Here is an example of how my folder is structured:
 
-![](/Users/gabriel/Documents/Mapinguari/vignettes/folder_organization.png)
+![](/Volumes/Podocnemis/Gabriel/MapinguariLegacy/vignettes/folder_organization.png)
 
 I'm going to assign the path to that directory to an object:
 
