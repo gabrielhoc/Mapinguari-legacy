@@ -122,10 +122,11 @@ get_rasters <- function(raster_source = NULL,
     cropped_raster_list <-
       lapply(cropped_raster_list, function(x){
 
+        string <-
         x %>%
           names() %>%
           stringr::str_sub(., -2) %>%
-          qdap::mgsub(letters, 0, .) %>%
+          gsub(paste(letters, collapse = "|"), 0, .) %>%
           order() %>%
           `[[`(x, .)
 
