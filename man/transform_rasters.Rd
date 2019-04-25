@@ -4,7 +4,8 @@
 \alias{transform_rasters}
 \title{Transform environmental rasters in ecophysiological rasters.}
 \usage{
-transform_rasters(raster_stack, FUN_qlist, separator = "_", alert = NULL)
+transform_rasters(raster_stack, FUN_qlist, separator = "_",
+  alert = NULL)
 }
 \arguments{
 \item{raster_stack}{RasterStack. Stack with environmental layers.}

@@ -4,11 +4,11 @@
 \alias{get_rasters}
 \title{Retrieve and organize spatial environmental information.}
 \usage{
-get_rasters(raster_source = NULL, ext = c(-180, 180, -60, 90), margin = 0,
-  resolution = 10, non_fixed_var = NULL, fixed_var = NULL,
-  years = "present", scenarios = NULL, baseline = "present",
-  separator = "_", projection_model = "MP", reorder = FALSE,
-  download_source = "pkg-raster", alert = NULL)
+get_rasters(raster_source = NULL, ext = c(-180, 180, -60, 90),
+  margin = 0, resolution = 10, non_fixed_var = NULL,
+  fixed_var = NULL, years = "present", scenarios = NULL,
+  baseline = "present", separator = "_", projection_model = "MP",
+  reorder = FALSE, download_source = "pkg-raster", alert = NULL)
 }
 \arguments{
 \item{raster_source}{character or list of RasterStack. You can either input a path to a folder with the required rasters or a list of RasterStack organized by year/scenario.}
