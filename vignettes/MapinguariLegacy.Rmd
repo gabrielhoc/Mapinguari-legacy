@@ -71,7 +71,7 @@ Some points might be too close to each other and be redundant, while other might
 # First, we need an altitude raster.
 
 alt_list <- get_rasters(
-     raster_source = "/Volumes/Podocnemis/Gabriel/Dropbox/data/rasters/worldclim/global_rasters_10min_reordered",
+     raster_source = "/Volumes/Podocnemis/Gabriel/Dropbox/data/rasters/worldclim/global_rasters_10min",
      ext = FulanusDistribution,
      #non_fixed_var = c('prec', 'tmin', 'tmax'), # make this optional
      fixed_var = 'alt')
@@ -114,7 +114,7 @@ library(raster)
 
 FulanusEcoRasters_present <-
    get_rasters(
-     raster_source = "/Users/gabriel/Documents/Mapinguari/global_grids_10_minutes",
+     raster_source = "/Volumes/Podocnemis/Gabriel/Dropbox/data/rasters/worldclim/global_rasters_10min",
      ext = FulanusDistribution_clean,
      margin = 5,
      non_fixed_var = c('prec', 'tmin', 'tmax'),
@@ -134,7 +134,7 @@ However, in order for Mapinguari to recognize which variables correspond to each
 I'm going to assign the path to that directory to an object:
 
 ```{r}
-my_directory <- "/Users/gabriel/Documents/Mapinguari/global_grids_10_minutes"
+my_directory <- "/Volumes/Podocnemis/Gabriel/Dropbox/data/rasters/worldclim/global_rasters_10min"
 ```
 
 Why did I place some variables in the `non-fixed` argument and others in the `fixed` argument? Variables on `non_fixed` are things such as climate, which you expect to change in different times and future scenarios, while variables in `fixed` are things such as geological features, which you expect to remain constant accross the time projected.

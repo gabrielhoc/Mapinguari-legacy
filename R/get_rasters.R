@@ -63,6 +63,28 @@ get_rasters <- function(raster_source = NULL,
   alert = NULL
 ) {
 
+  raster_source = NULL
+  ext = c(-180, 180, -60, 90)
+  margin = 0
+  resolution = 10
+  non_fixed_var = NULL
+  fixed_var = NULL
+  years = 'present'
+  scenarios = NULL
+  baseline = "present"
+  separator = '_'
+  projection_model = 'MP'
+  reorder = FALSE
+  download_source = 'pkg-raster'
+  alert = NULL
+  raster_source = my_directory
+  ext = FulanusDistribution_clean
+  margin = 5
+  non_fixed_var = c('prec', 'tmin', 'tmax')
+  years = c('2050', '2070')
+  scenarios = c('rcp26', 'rcp45', 'rcp85')
+  reorder = TRUE
+
   # Select extent by species distribution
 
   if (class(ext) == "numeric") {
@@ -122,10 +144,11 @@ get_rasters <- function(raster_source = NULL,
     cropped_raster_list <-
       lapply(cropped_raster_list, function(x){
 
+        string <-
         x %>%
           names() %>%
           stringr::str_sub(., -2) %>%
-          qdap::mgsub(letters, 0, .) %>%
+          gsub(paste(letters, collapse = "|"), 0, .) %>%
           order() %>%
           `[[`(x, .)
 
